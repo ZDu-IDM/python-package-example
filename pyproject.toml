@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-package-example"
+version = "0.1"
+description = "An example python package"
+readme = "README.txt"
+license = { text = "MIT" }
+authors = [
+    { name = "Bill Mills", email = "myemail@example.com" },
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/BillMills/python-package-example"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+myPackage = ["packageData/*.dat"]
